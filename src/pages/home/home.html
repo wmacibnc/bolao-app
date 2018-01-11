@@ -4,13 +4,12 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="fundo">
   <ion-searchbar (ionInput)="getItems($event)" placeholder="Busca por nome"></ion-searchbar>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <button (click)="goBack(item)">
-        {{ item[23] }}º {{ item[0] }} - {{ item[22] }} pontos
-      </button>
-    </ion-item>
+  <ion-list>     
+      <a ion-item (click)="goBack(item)" *ngFor="let item of items" class="fundo">
+        <div id="circulo1">{{ item[23] }}º</div>
+      <span class="nome">{{ item[0] }}</span> - {{ item[22] }} pontos
+    </a>
   </ion-list>
 </ion-content>
