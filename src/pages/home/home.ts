@@ -8,7 +8,7 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
 	searchQuery: string = '';
-	items = [];
+	items: any[];
 
 	constructor() {
 		this.initializeItems();
