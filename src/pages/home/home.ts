@@ -8,9 +8,9 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
 	searchQuery: string = '';
-	items: any[];
+	items = [];
 
-	constructor() {
+	constructor(public navCtrl: NavController) {
 		this.initializeItems();
 	}
 
@@ -31,7 +31,7 @@ export class HomePage {
 }
 
 goBack(item){
-	alert(item);
+	this.navCtrl.push('DetalhePage', { item: item });
 }
 
 initializeItems() {
