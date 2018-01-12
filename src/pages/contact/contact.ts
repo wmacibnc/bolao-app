@@ -6,7 +6,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-
+	contrast : number = 14;
   constructor(public navCtrl: NavController) {
 
   }

@@ -17,6 +17,8 @@ export class DetalhePage {
 	objeto : any [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+	this.objeto =  this.navParams.data.item;
+
   }
 
   ionViewDidLoad() {

@@ -8,9 +8,10 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
 	searchQuery: string = '';
-	items = [];
+	items : any;
 
 	constructor(public navCtrl: NavController) {
+		this.items = [];
 		this.initializeItems();
 	}
 
@@ -77,18 +78,18 @@ initializeItems() {
 
 	concursos = concursos.filter(function (item, pos) {return concursos.indexOf(item) == pos});
 
-	for (var j = 0; j < this.items.length; j++) {
-		for (var k = 1; k <=21; k++) {
-			for (var i = 0; i < concursos.length; i++) {
-				if(this.items[j][k] == concursos[i]){
-					if(!this.items[j][22]){
-						this.items[j][22] = 0;
+	for (var o = 0; o < this.items.length; o++) {
+		for (var p = 1; p <=21; p++) {
+			for (var q = 0; q < concursos.length; q++) {
+				if(this.items[o][p] == concursos[q]){
+					if(!this.items[o][22]){
+						this.items[o][22] = 0;
 					}
-					this.items[j][22] = this.items[j][22] + 1;
+					this.items[o][22] = this.items[o][22] + 1;
 				}
 			}
 		}
-		this.items[j][23] = j+1;
+		this.items[o][23] = o+1;
 	}
 }
 
